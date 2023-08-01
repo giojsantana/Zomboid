@@ -1,0 +1,198 @@
+/* 
+
+----Colors----
+Main: #0d191f;
+
+*/
+
+* {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #0d191f;
+  padding: 2.5rem 5rem;
+}
+.nav {
+  display: flex;
+}
+.nav--logo {
+  width: 12rem;
+}
+.nav--link {
+  color: #fff;
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  margin-left: auto;
+  gap: 3rem;
+}
+
+.section-heading {
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+}
+
+/* PERKS */
+.perk-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: fit-content;
+  width: 150rem;
+  gap: 0.3rem 1rem;
+  overflow: hidden;
+  background-color: #0000005c;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: auto;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+}
+.occupations {
+  height: 80rem;
+  overflow-y: scroll;
+  font-size: 4rem;
+}
+.occupation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.2rem;
+  height: 5rem;
+  padding-left: 0.5rem;
+}
+.occupation--unemployed {
+  padding-left: 1rem;
+}
+.occupation--img {
+  width: 5rem;
+}
+.trait {
+  justify-content: space-between;
+  padding: 0.1rem 1rem;
+}
+.trait,
+.traits--name {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+}
+.traits--title {
+  margin-left: 0.5rem;
+}
+.traits--negative {
+  color: #8b1c0b;
+}
+.traits--positive {
+  color: #32a852;
+}
+
+.traits--negative,
+.traits--positive,
+.skills--description,
+.skills--major-skills {
+  height: 38rem;
+  overflow-y: scroll;
+}
+.occupation,
+.trait,
+.skills--description,
+.skills--major-skills {
+  background-color: #0000005c;
+}
+.trait--active {
+  background-color: #c06c1752;
+}
+.points-bank {
+  display: inline-block;
+  margin-left: auto;
+}
+.add-trait--negative {
+  grid-column: 1/3;
+}
+.perk-box-title {
+  font-size: 1.6rem;
+}
+.skills-section-title {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.major-skills {
+  position: absolute;
+  transform: translateY(30%);
+}
+.add-trait,
+.reset-traits,
+.random-traits,
+.remove-trait {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+  margin-left: auto;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #3e0505;
+  padding: 0.2rem;
+}
+.reset-traits,
+.random-traits {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.skills--buttons {
+  grid-column: 3/4;
+  margin-left: auto;
+}
+.major-skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.4rem 0;
+  padding: 0.3rem 0.7rem;
+  color: #32a852;
+  border-top: 1px solid #282828;
+}
+.major-skill:last-child {
+  border-bottom: 1px solid #282828;
+}
+.major-skill--name {
+  font-size: 1rem;
+}
+.major-skill--level--num {
+  color: #32a852;
+  font-size: 1.4rem;
+  display: inline-block;
+}
+.points-bank {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+}
+.points {
+  font-size: 1.5rem;
+}
+.points-positive {
+  color: #32a852;
+}
+.points-negative {
+  color: #8b1c0b;
+}
+.chosen-perks {
+  overflow: hidden;
+  height: fit-content;
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 1560px) {
+  .perk-box {
+    width: 100rem;
+  }
+}

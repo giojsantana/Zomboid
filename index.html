@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <title>Zomboid Helper</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <img src="imgs/logo.png" class="nav--logo" />
+      <div class="nav--link">
+        <p class="nav--links perks-link">Perks</p>
+        <p class="nav--links spawn-link">Spawn Locations</p>
+        <p class="nav--links skills-link">Skills</p>
+      </div>
+    </nav>
+    <section class="section-perks">
+      <h2 class="section-heading">Select Occupation and Traits</h2>
+
+      <div class="perk-box">
+        <h3 class="perk-box-title">Occupation</h3>
+        <h3 class="perk-box-title">Available Traits</h3>
+        <h3 class="perk-box-title">Chosen Traits</h3>
+        <div class="occupations">
+          <div
+            class="occupation trait--active"
+            data-fitness="5"
+            data-strength="5"
+            data-points="8"
+          >
+            <h3 class="occupation--title occupation--unemployed">Unemployed</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="6"
+            data-strength="6"
+            data-points="0"
+            data-axe="1"
+            data-axe-bonus="75"
+            data-sprinting="1"
+            data-sprinting-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/e/eb/Fire_Officer.png?20180429172147"
+            />
+            <h3 class="occupation--title">Fire Officer</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-aiming="3"
+            data-aiming-bonus="125"
+            data-nimble="1"
+            data-nimble-bonus="75"
+            data-reloading="2"
+            data-reloading-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/6/66/Police_Officer.png?20180429172132"
+            />
+            <h3 class="occupation--title">Police Officer</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-axe="1"
+            data-axe-bonus="75"
+            data-carpentry="1"
+            data-carpentry-bonus="75"
+            data-foraging="2"
+            data-foraging-bonus="100"
+            data-trapping="2"
+            data-trapping-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/7/77/Park_Ranger.png?20160126102718"
+            />
+            <h3 class="occupation--title">Park Ranger</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-2"
+            data-carpentry="1"
+            data-carpentry-bonus="75"
+            data-short*blunt="3"
+            data-short*blunt-bonus="125"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/0/02/Construction_Worker.png?20180429172120"
+            />
+            <h3 class="occupation--title">Construction Worker</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-2"
+            data-lightfooted="1"
+            data-lightfooted-bonus="75"
+            data-sprinting="2"
+            data-sprinting-bonus="100"
+            data-special-skill="nightOwl"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/1/1b/Security_Guard.png?20180429172108"
+            />
+            <h3 class="occupation--title">Security Guard</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="2"
+            data-carpentry="3"
+            data-carpentry-bonus="125"
+            data-short*blunt="1"
+            data-short*blunt-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/0/0a/Carpenter.png?20180429172050"
+            />
+            <h3 class="occupation--title">Carpenter</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-6"
+            data-lightfooted="2"
+            data-lightfooted-bonus="100"
+            data-nimble="2"
+            data-nimble-bonus="100"
+            data-sneaking="2"
+            data-sneaking-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/2/29/Burglar.png?20180429172040"
+            />
+            <h3 class="occupation--title">Burglar</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-cooking="3"
+            data-cooking-bonus="125"
+            data-maintenance="1"
+            data-maintenance-bonus="75"
+            data-short*blade="1"
+            data-short*blade-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/e/e5/Chef.png?20180429172028"
+            />
+            <h3 class="occupation--title">Chef</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-carpentry="1"
+            data-carpentry-bonus="75"
+            data-maintenance="2"
+            data-maintenance-bonus="100"
+            data-short*blunt="1"
+            data-short*blunt-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/9/9e/Repairman.png"
+            />
+            <h3 class="occupation--title">Repairman</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="2"
+            data-farming="3"
+            data-farming-bonus="125"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/3/3d/Farmer.png"
+            />
+            <h3 class="occupation--title">Farmer</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-2"
+            data-fishing="3"
+            data-fishing-bonus="125"
+            data-foraging="1"
+            data-foraging-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/f/f0/Fisherman.png"
+            />
+            <h3 class="occupation--title">Fisherman</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="2"
+            data-first*aid="3"
+            data-first*aid-bonus="125"
+            data-short*blade="1"
+            data-short*blade-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/6/6c/Doctor.png"
+            />
+            <h3 class="occupation--title">Doctor</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-8"
+            data-aiming="2"
+            data-aiming-bonus="100"
+            data-reloading="2"
+            data-reloading-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/c/c5/Veteran.png"
+            />
+            <h3 class="occupation--title">Veteran</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="2"
+            data-first*aid="2"
+            data-first*aid-bonus="100"
+            data-lightfooted="1"
+            data-lightfooted-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/c/cc/Nurse.png"
+            />
+            <h3 class="occupation--title">Nurse</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="6"
+            data-points="0"
+            data-axe="2"
+            data-axe-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/c/cc/Lumberjack.png"
+            />
+            <h3 class="occupation--title">Lumberjack</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="8"
+            data-strength="5"
+            data-points="-6"
+            data-sprinting="2"
+            data-sprinting-bonus="100"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/0/07/FitnessInstructor.png"
+            />
+            <h3 class="occupation--title">Fitness Instructor</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="2"
+            data-cooking="2"
+            data-cooking-bonus="100"
+            data-maintenance="1"
+            data-maintenance-bonus="75"
+            data-short*blade="1"
+            data-short*blade-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/f/f9/BurgerFlipper.png"
+            />
+            <h3 class="occupation--title">Burger Flipper</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-electrician="3"
+            data-electrician-bonus="125"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/d/dd/Electrician.png"
+            />
+            <h3 class="occupation--title">Electrician</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-carpentry="1"
+            data-carpentry-bonus="75"
+            data-electrician="1"
+            data-electrician-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/d/d8/Engineer.png"
+            />
+            <h3 class="occupation--title">Engineer</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-6"
+            data-metalworking="3"
+            data-metalworking-bonus="125"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/a/a3/Metalworker.png"
+            />
+            <h3 class="occupation--title">Metalworker</h3>
+          </div>
+          <div
+            class="occupation"
+            data-fitness="5"
+            data-strength="5"
+            data-points="-4"
+            data-mechanics="3"
+            data-mechanics-bonus="125"
+            data-short*blunt="1"
+            data-short*blunt-bonus="75"
+          >
+            <img
+              class="occupation--img"
+              src="https://pzwiki.net/w/images/5/55/Mechanic.png"
+            />
+            <h3 class="occupation--title">Mechanic</h3>
+          </div>
+        </div>
+        <div class="traits--picker">
+          <p class="skills-section-title">description</p>
+          <div class="traits--positive">
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_roadrage.png" class="traits--img" />
+                <p class="traits--title">Speed Demon</p>
+              </div>
+              <p class="trait--cost">-1</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_nightvision.png" class="traits--img" />
+                <p class="traits--title">Cat's Eyes</p>
+              </div>
+              <p class="trait--cost">-2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_dextrous.png" class="traits--img" />
+                <p class="traits--title">Dextrous</p>
+              </div>
+              <p class="trait--cost">-2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_fastreader.png" class="traits--img" />
+                <p class="traits--title">Fast Reader</p>
+              </div>
+              <p class="trait--cost">-2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitOutdoorsman.png" class="traits--img" />
+                <p class="traits--title">Outdoorsman</p>
+              </div>
+              <p class="trait--cost">-2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitWakeful.png" class="traits--img" />
+                <p class="traits--title">Wakeful</p>
+              </div>
+              <p class="trait--cost">-2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitIronGut.png" class="traits--img" />
+                <p class="traits--title">Iron Gut</p>
+              </div>
+              <p class="trait--cost">-3</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_fishing.png" class="traits--img" />
+                <p class="traits--title">Angler</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_baseballplayer.png" class="traits--img" />
+                <p class="traits--title">Baseball Player</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_brave.png" class="traits--img" />
+                <p class="traits--title">Brave</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_firstaid.png" class="traits--img" />
+                <p class="traits--title">First Aider</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_gardener.png" class="traits--img" />
+                <p class="traits--title">Gardener</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_graceful.png" class="traits--img" />
+                <p class="traits--title">Graceful</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitInconspicuous.png" class="traits--img" />
+                <p class="traits--title">Inconspicuous</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitLightEater.png" class="traits--img" />
+                <p class="traits--title">Light Eater</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitLucky.png" class="traits--img" />
+                <p class="traits--title">Lucky</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitNutritionist.png" class="traits--img" />
+                <p class="traits--title">Nutritionist</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitResilient.png" class="traits--img" />
+                <p class="traits--title">Resilient</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitRunner.png" class="traits--img" />
+                <p class="traits--title">Runner</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitTailor.png" class="traits--img" />
+                <p class="traits--title">Sewer</p>
+              </div>
+              <p class="trait--cost">-4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitMechanic.png" class="traits--img" />
+                <p class="traits--title">Amateur Mechanic</p>
+              </div>
+              <p class="trait--cost">-5</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_gymnast.png" class="traits--img" />
+                <p class="traits--title">Gymnast</p>
+              </div>
+              <p class="trait--cost">-5</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_brawler.png" class="traits--img" />
+                <p class="traits--title">Brawler</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_cook.png" class="traits--img" />
+                <p class="traits--title">Cook</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_eagleeyed.png" class="traits--img" />
+                <p class="traits--title">Eagle Eyed</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_fasthealer.png" class="traits--img" />
+                <p class="traits--title">Fast Healer</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_fastlearner.png" class="traits--img" />
+                <p class="traits--title">Fast Learner</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_fit.png" class="traits--img" />
+                <p class="traits--title">Fit</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_formerscout.png" class="traits--img" />
+                <p class="traits--title">Former Scout</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_herbalist.png" class="traits--img" />
+                <p class="traits--title">Herbalist</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitHiker.png" class="traits--img" />
+                <p class="traits--title">Hiker</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitKeenHearing.png" class="traits--img" />
+                <p class="traits--title">Keen Hearing</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitLowThirst.png" class="traits--img" />
+                <p class="traits--title">Low Thirst</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitOrganized.png" class="traits--img" />
+                <p class="traits--title">Organized</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitStout.png" class="traits--img" />
+                <p class="traits--title">Stout</p>
+              </div>
+              <p class="trait--cost">-6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img
+                  src="imgs/Trait_adrenalinejunkie.png"
+                  class="traits--img"
+                />
+                <p class="traits--title">Adrenaline Junkie</p>
+              </div>
+              <p class="trait--cost">-8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_handy.png" class="traits--img" />
+                <p class="traits--title">Handy</p>
+              </div>
+              <p class="trait--cost">-8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitHunter.png" class="traits--img" />
+                <p class="traits--title">Hunter</p>
+              </div>
+              <p class="trait--cost">-8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitThickSkinned.png" class="traits--img" />
+                <p class="traits--title">Thick Skinned</p>
+              </div>
+              <p class="trait--cost">-8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_athletic.png" class="traits--img" />
+                <p class="traits--title">Athletic</p>
+              </div>
+              <p class="trait--cost">-10</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitStrong.png" class="traits--img" />
+                <p class="traits--title">Strong</p>
+              </div>
+              <p class="trait--cost">-10</p>
+            </div>
+          </div>
+          <button class="add-trait add-trait--positive">Add Trait ></button>
+          <div class="traits--negative">
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_sundaydriver.png" class="traits--img" />
+                <p class="traits--title">Sunday Driver</p>
+              </div>
+              <p class="trait--cost">+1</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_allthumbs.png" class="traits--img" />
+                <p class="traits--title">All Thumbs</p>
+              </div>
+              <p class="trait--cost">+2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_clumsy.png" class="traits--img" />
+                <p class="traits--title">Clumsy</p>
+              </div>
+              <p class="trait--cost">+2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_cowardly.png" class="traits--img" />
+                <p class="traits--title">Cowardly</p>
+              </div>
+              <p class="trait--cost">+2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitShortSighted.png" class="traits--img" />
+                <p class="traits--title">Short Sighted</p>
+              </div>
+              <p class="trait--cost">+2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitSlowReader.png" class="traits--img" />
+                <p class="traits--title">Slow Reader</p>
+              </div>
+              <p class="trait--cost">+2</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitWeakStomach.png" class="traits--img" />
+                <p class="traits--title">Weak Stomach</p>
+              </div>
+              <p class="trait--cost">+3</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_agoraphobic.png" class="traits--img" />
+                <p class="traits--title">Agoraphobic</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_claustophobic.png" class="traits--img" />
+                <p class="traits--title">Claustrophobic</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_conspicuous.png" class="traits--img" />
+                <p class="traits--title">Conspicuous</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_disorganized.png" class="traits--img" />
+                <p class="traits--title">Disorganized</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_hardofhearing.png" class="traits--img" />
+                <p class="traits--title">Hard of Hearing</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_heartyappetite.png" class="traits--img" />
+                <p class="traits--title">Hearty Appetite</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitPacifist.png" class="traits--img" />
+                <p class="traits--title">Pacifist</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitHypochondriac.png" class="traits--img" />
+                <p class="traits--title">Prone to Illness</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitSleepyhead.png" class="traits--img" />
+                <p class="traits--title">Sleepyhead</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitSmoker.png" class="traits--img" />
+                <p class="traits--title">Smoker</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitUnlucky.png" class="traits--img" />
+                <p class="traits--title">Unlucky</p>
+              </div>
+              <p class="trait--cost">+4</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_asthmatic.png" class="traits--img" />
+                <p class="traits--title">Asthmatic</p>
+              </div>
+              <p class="trait--cost">+5</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_hemophobic.png" class="traits--img" />
+                <p class="traits--title">Fear of Blood</p>
+              </div>
+              <p class="trait--cost">+5</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_feeble.png" class="traits--img" />
+                <p class="traits--title">Feeble</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_highthirst.png" class="traits--img" />
+                <p class="traits--title">High Thirst</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitOutofShape.png" class="traits--img" />
+                <p class="traits--title">Out of Shape</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitOverweight.png" class="traits--img" />
+                <p class="traits--title">Overweight</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitRestlessSleeper.png" class="traits--img" />
+                <p class="traits--title">Restless Sleeper</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitSlowHealer.png" class="traits--img" />
+                <p class="traits--title">Slow Healer</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitSlowLearner.png" class="traits--img" />
+                <p class="traits--title">Slow Learner</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitUnderweight.png" class="traits--img" />
+                <p class="traits--title">Underweight</p>
+              </div>
+              <p class="trait--cost">+6</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitIlliterate.png" class="traits--img" />
+                <p class="traits--title">Illiterate</p>
+              </div>
+              <p class="trait--cost">+8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitThinskinned.png" class="traits--img" />
+                <p class="traits--title">Thin-skinned</p>
+              </div>
+              <p class="trait--cost">+8</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitObese.png" class="traits--img" />
+                <p class="traits--title">Obese</p>
+              </div>
+              <p class="trait--cost">+10</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitUnfit.png" class="traits--img" />
+                <p class="traits--title">Unfit</p>
+              </div>
+              <p class="trait--cost">+10</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img
+                  src="imgs/Trait_very_underweight.png"
+                  class="traits--img"
+                />
+                <p class="traits--title">Very Underweight</p>
+              </div>
+              <p class="trait--cost">+10</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/TraitWeak.png" class="traits--img" />
+                <p class="traits--title">Weak</p>
+              </div>
+              <p class="trait--cost">+10</p>
+            </div>
+            <div class="trait">
+              <div class="traits--name">
+                <img src="imgs/Trait_deaf.png" class="traits--img" />
+                <p class="traits--title">Deaf</p>
+              </div>
+              <p class="trait--cost">+12</p>
+            </div>
+          </div>
+        </div>
+        <div class="traits--chosen">
+          <p class="skills-section-title">Description</p>
+          <div class="skills--description">
+            <div class="traits--positive chosen-perks">
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_roadrage.png" class="traits--img" />
+                  <p class="traits--title">Speed Demon</p>
+                </div>
+                <p class="trait--cost">-1</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_nightvision.png" class="traits--img" />
+                  <p class="traits--title">Cat's Eyes</p>
+                </div>
+                <p class="trait--cost">-2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_dextrous.png" class="traits--img" />
+                  <p class="traits--title">Dextrous</p>
+                </div>
+                <p class="trait--cost">-2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_fastreader.png" class="traits--img" />
+                  <p class="traits--title">Fast Reader</p>
+                </div>
+                <p class="trait--cost">-2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitOutdoorsman.png" class="traits--img" />
+                  <p class="traits--title">Outdoorsman</p>
+                </div>
+                <p class="trait--cost">-2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitWakeful.png" class="traits--img" />
+                  <p class="traits--title">Wakeful</p>
+                </div>
+                <p class="trait--cost">-2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitIronGut.png" class="traits--img" />
+                  <p class="traits--title">Iron Gut</p>
+                </div>
+                <p class="trait--cost">-3</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_fishing.png" class="traits--img" />
+                  <p class="traits--title">Angler</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img
+                    src="imgs/Trait_baseballplayer.png"
+                    class="traits--img"
+                  />
+                  <p class="traits--title">Baseball Player</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_brave.png" class="traits--img" />
+                  <p class="traits--title">Brave</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_firstaid.png" class="traits--img" />
+                  <p class="traits--title">First Aider</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_gardener.png" class="traits--img" />
+                  <p class="traits--title">Gardener</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_graceful.png" class="traits--img" />
+                  <p class="traits--title">Graceful</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitInconspicuous.png" class="traits--img" />
+                  <p class="traits--title">Inconspicuous</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitLightEater.png" class="traits--img" />
+                  <p class="traits--title">Light Eater</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitLucky.png" class="traits--img" />
+                  <p class="traits--title">Lucky</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitNutritionist.png" class="traits--img" />
+                  <p class="traits--title">Nutritionist</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitResilient.png" class="traits--img" />
+                  <p class="traits--title">Resilient</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitRunner.png" class="traits--img" />
+                  <p class="traits--title">Runner</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitTailor.png" class="traits--img" />
+                  <p class="traits--title">Sewer</p>
+                </div>
+                <p class="trait--cost">-4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitMechanic.png" class="traits--img" />
+                  <p class="traits--title">Amateur Mechanic</p>
+                </div>
+                <p class="trait--cost">-5</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_gymnast.png" class="traits--img" />
+                  <p class="traits--title">Gymnast</p>
+                </div>
+                <p class="trait--cost">-5</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_brawler.png" class="traits--img" />
+                  <p class="traits--title">Brawler</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_cook.png" class="traits--img" />
+                  <p class="traits--title">Cook</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_eagleeyed.png" class="traits--img" />
+                  <p class="traits--title">Eagle Eyed</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_fasthealer.png" class="traits--img" />
+                  <p class="traits--title">Fast Healer</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_fastlearner.png" class="traits--img" />
+                  <p class="traits--title">Fast Learner</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_fit.png" class="traits--img" />
+                  <p class="traits--title">Fit</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_formerscout.png" class="traits--img" />
+                  <p class="traits--title">Former Scout</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_herbalist.png" class="traits--img" />
+                  <p class="traits--title">Herbalist</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitHiker.png" class="traits--img" />
+                  <p class="traits--title">Hiker</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitKeenHearing.png" class="traits--img" />
+                  <p class="traits--title">Keen Hearing</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitLowThirst.png" class="traits--img" />
+                  <p class="traits--title">Low Thirst</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitOrganized.png" class="traits--img" />
+                  <p class="traits--title">Organized</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitStout.png" class="traits--img" />
+                  <p class="traits--title">Stout</p>
+                </div>
+                <p class="trait--cost">-6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img
+                    src="imgs/Trait_adrenalinejunkie.png"
+                    class="traits--img"
+                  />
+                  <p class="traits--title">Adrenaline Junkie</p>
+                </div>
+                <p class="trait--cost">-8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_handy.png" class="traits--img" />
+                  <p class="traits--title">Handy</p>
+                </div>
+                <p class="trait--cost">-8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitHunter.png" class="traits--img" />
+                  <p class="traits--title">Hunter</p>
+                </div>
+                <p class="trait--cost">-8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitThickSkinned.png" class="traits--img" />
+                  <p class="traits--title">Thick Skinned</p>
+                </div>
+                <p class="trait--cost">-8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_athletic.png" class="traits--img" />
+                  <p class="traits--title">Athletic</p>
+                </div>
+                <p class="trait--cost">-10</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitStrong.png" class="traits--img" />
+                  <p class="traits--title">Strong</p>
+                </div>
+                <p class="trait--cost">-10</p>
+              </div>
+            </div>
+            <div class="traits--special chosen-perks">
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitNightOwl.png" class="traits--img" />
+                  <p class="traits--title">N&zwnj;ight Owl</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_burglar.png" class="traits--img" />
+                  <p class="traits--title">B&zwnj;urglar</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_cook.png" class="traits--img" />
+                  <p class="traits--title">C&zwnj;ook</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitDesensitized.png" class="traits--img" />
+                  <p class="traits--title">D&zwnj;esensitized</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitAxeman.png" class="traits--img" />
+                  <p class="traits--title">A&zwnj;xe Man</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitNutritionist.png" class="traits--img" />
+                  <p class="traits--title">N&zwnj;utritionist</p>
+                </div>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <p class="traits--title">A&zwnj;mateur Mechanic</p>
+                </div>
+              </div>
+            </div>
+            <div class="traits--negative chosen-perks">
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_sundaydriver.png" class="traits--img" />
+                  <p class="traits--title">Sunday Driver</p>
+                </div>
+                <p class="trait--cost">+1</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_allthumbs.png" class="traits--img" />
+                  <p class="traits--title">All Thumbs</p>
+                </div>
+                <p class="trait--cost">+2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_clumsy.png" class="traits--img" />
+                  <p class="traits--title">Clumsy</p>
+                </div>
+                <p class="trait--cost">+2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_cowardly.png" class="traits--img" />
+                  <p class="traits--title">Cowardly</p>
+                </div>
+                <p class="trait--cost">+2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitShortSighted.png" class="traits--img" />
+                  <p class="traits--title">Short Sighted</p>
+                </div>
+                <p class="trait--cost">+2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitSlowReader.png" class="traits--img" />
+                  <p class="traits--title">Slow Reader</p>
+                </div>
+                <p class="trait--cost">+2</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitWeakStomach.png" class="traits--img" />
+                  <p class="traits--title">Weak Stomach</p>
+                </div>
+                <p class="trait--cost">+3</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_agoraphobic.png" class="traits--img" />
+                  <p class="traits--title">Agoraphobic</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_claustophobic.png" class="traits--img" />
+                  <p class="traits--title">Claustrophobic</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_conspicuous.png" class="traits--img" />
+                  <p class="traits--title">Conspicuous</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_disorganized.png" class="traits--img" />
+                  <p class="traits--title">Disorganized</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_hardofhearing.png" class="traits--img" />
+                  <p class="traits--title">Hard of Hearing</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img
+                    src="imgs/Trait_heartyappetite.png"
+                    class="traits--img"
+                  />
+                  <p class="traits--title">Hearty Appetite</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitPacifist.png" class="traits--img" />
+                  <p class="traits--title">Pacifist</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitHypochondriac.png" class="traits--img" />
+                  <p class="traits--title">Prone to Illness</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitSleepyhead.png" class="traits--img" />
+                  <p class="traits--title">Sleepyhead</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitSmoker.png" class="traits--img" />
+                  <p class="traits--title">Smoker</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitUnlucky.png" class="traits--img" />
+                  <p class="traits--title">Unlucky</p>
+                </div>
+                <p class="trait--cost">+4</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_asthmatic.png" class="traits--img" />
+                  <p class="traits--title">Asthmatic</p>
+                </div>
+                <p class="trait--cost">+5</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_hemophobic.png" class="traits--img" />
+                  <p class="traits--title">Fear of Blood</p>
+                </div>
+                <p class="trait--cost">+5</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_feeble.png" class="traits--img" />
+                  <p class="traits--title">Feeble</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_highthirst.png" class="traits--img" />
+                  <p class="traits--title">High Thirst</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitOutofShape.png" class="traits--img" />
+                  <p class="traits--title">Out of Shape</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitOverweight.png" class="traits--img" />
+                  <p class="traits--title">Overweight</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img
+                    src="imgs/TraitRestlessSleeper.png"
+                    class="traits--img"
+                  />
+                  <p class="traits--title">Restless Sleeper</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitSlowHealer.png" class="traits--img" />
+                  <p class="traits--title">Slow Healer</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitSlowLearner.png" class="traits--img" />
+                  <p class="traits--title">Slow Learner</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitUnderweight.png" class="traits--img" />
+                  <p class="traits--title">Underweight</p>
+                </div>
+                <p class="trait--cost">+6</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitIlliterate.png" class="traits--img" />
+                  <p class="traits--title">Illiterate</p>
+                </div>
+                <p class="trait--cost">+8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitThinskinned.png" class="traits--img" />
+                  <p class="traits--title">Thin-skinned</p>
+                </div>
+                <p class="trait--cost">+8</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitObese.png" class="traits--img" />
+                  <p class="traits--title">Obese</p>
+                </div>
+                <p class="trait--cost">+10</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitUnfit.png" class="traits--img" />
+                  <p class="traits--title">Unfit</p>
+                </div>
+                <p class="trait--cost">+10</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img
+                    src="imgs/Trait_very_underweight.png"
+                    class="traits--img"
+                  />
+                  <p class="traits--title">Very Underweight</p>
+                </div>
+                <p class="trait--cost">+10</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/TraitWeak.png" class="traits--img" />
+                  <p class="traits--title">Weak</p>
+                </div>
+                <p class="trait--cost">+10</p>
+              </div>
+              <div class="trait">
+                <div class="traits--name">
+                  <img src="imgs/Trait_deaf.png" class="traits--img" />
+                  <p class="traits--title">Deaf</p>
+                </div>
+                <p class="trait--cost">+12</p>
+              </div>
+            </div>
+          </div>
+          <p class="skills-section-title major-skills">Major Skills</p>
+          <button class="remove-trait">&lt Remove Trait</button>
+          <div class="skills--major-skills">
+            <div class="major-skill">
+              <p class="major-skill--name">Fitness</p>
+              <div class="major-skill--level">
+                <p class="major-skill--level--num">5</p>
+              </div>
+            </div>
+            <div class="major-skill">
+              <p class="major-skill--name">Strength</p>
+              <div class="major-skill--level">
+                <p class="major-skill--level--num">5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="add-trait add-trait--negative">Add Trait ></button>
+        <p class="points-bank">
+          Points to Spend <span class="points points-positive">8</span>
+        </p>
+        <div class="skills--buttons">
+          <button class="reset-traits">RESET TRAITS</button>
+          <button class="random-traits">RANDOM</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
